@@ -1,4 +1,4 @@
-<h1>parte destinada a espaços sobre o site que são públicos🎮</h1>
+<h1>Parte destinada a espaços sobre o site que são públicos🎮</h1>
 
 
 <h2>Linguagens utilizadas:</h2>
