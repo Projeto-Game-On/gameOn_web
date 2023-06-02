@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-monkey.png" type="image/png">
+    <link rel="stylesheet" href="css/style-PadraoTodos.css">
+    <link rel="stylesheet" href="css/style-Cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="telaToda">
+        <div class="areaHeader">
+            <div class="logoHeader">
+                <p>GAME-ON</p>
+                <img src="img/logo-monkey.png" alt="Logo Macaco">
+            </div>
+            <div class="cardsHeader">
+                <a href="index.html">HOME</a>
+                <a href="index.html">SOBRE MIM</a>
+                <a href="index.html">SAIBA MAIS</a>
+                <a href="login.html">LOGIN</a>
+                <a id="cadastro">CADASTRO</a>
+            </div>
+        </div>
+        <div class="cardCadastro">
+            <h1>Cadastro</h1>
+            <div class="cadastro">
+                <div class="card titulo">
+                    <span>Login:</span>
+                    <input placeholder="Insira seu e-mail" id="input_login" type="text">     
+                </div>
+                <div class="card titulo">
+                    <span>Seu nick dos jogos:</span>
+                    <input placeholder="Insira seu nick" id="input_nick" type="text">     
+                </div>
+                <div class="card titulo">
+                    <span>Imagem de Perfil (Url da imagem):</span>
+                    <input placeholder="Insira sua imagem" id="input_imagem" type="url">
+                </div>
+                <div class="card titulo">
+                    <span>Senha:</span>
+                    <input placeholder="Insira sua senha" id="input_senha" type="text">                   
+                </div>
+            </div>
+            <button onclick="cadastro()">Cadastre-se</button>
+        </div>
+    </div>
+</body>
+
+</html>
