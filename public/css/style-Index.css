@@ -131,14 +131,14 @@
 }
 
 .segundaImagem {
-    margin-right: -15px ;
+    margin-right: -15px;
     display: flex;
     width: 10vh;
     height: auto;
     transform: rotate(25deg);
 }
 
-.areaTextoImagem{
+.areaTextoImagem {
     width: 90%;
     height: 90%;
     display: flex;
@@ -146,7 +146,8 @@
     align-items: center;
     justify-content: center;
 }
-.textoSaibaMais{
+
+.textoSaibaMais {
     width: 55%;
     height: 90%;
     /* border: red 2px solid; */
@@ -159,7 +160,7 @@
     font-size: 40px;
 }
 
-.imagemSaibaMais{
+.imagemSaibaMais {
     width: 45%;
     height: 90%;
     /* border: red 2px solid; */
@@ -168,7 +169,48 @@
     justify-content: center;
 }
 
-.imagemSaibaMais img{
+.imagemSaibaMais img {
     width: 70%;
     height: 88%;
+}
+
+.segundaTelaSaibaMais {
+    background-color: #050642;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaCardGraficoTexto {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoGrafico {
+    width: 50%;
+    height: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: red solid 2px; */
+}
+
+.textoGrafico p{
+    font-size: 50px;
+}
+
+.grafico{
+    width: 50%;
+    height: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: red solid 2px; */
 }

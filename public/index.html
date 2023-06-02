@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="img/logo-monkey.png" type="image/png">
     <link rel="stylesheet" href="css/style-PadraoTodos.css">
     <link rel="stylesheet" href="css/style-Index.css">
@@ -36,17 +37,17 @@
     </div>
     <div class="telaSobreMim">
         <div class="tituloSobreMim">
-            <h1>Sobre Mim</h1> 
+            <h1>Sobre Mim</h1>
         </div>
         <div class="areaCardsSobreMim">
             <div class="areaTexto">
                 <div class="textoSobreMim">
                     <p>Sou um gamer que sempre
-                    gostou de jogar jogos
-                    singleplayer, único jogador
-                    na maioria das vezes jogos do gênero do 
-                    soulslike. Com uma
-                    dificuldade acima do comum.</p>
+                        gostou de jogar jogos
+                        singleplayer, único jogador
+                        na maioria das vezes jogos do gênero do
+                        soulslike. Com uma
+                        dificuldade acima do comum.</p>
                 </div>
             </div>
             <div class="cardImagem">
@@ -58,19 +59,19 @@
     </div>
     <div class="primeiraTelaSaibaMais">
         <div class="headerSaibaMais">
-             <img src="img/jogos.png" alt="Controle" class="primeiraImagem">
+            <img src="img/jogos.png" alt="Controle" class="primeiraImagem">
             <h1>Saiba mais</h1>
             <img src="img/icons8-controle-96.png" alt="Controle" class="segundaImagem">
         </div>
         <div class="areaTextoImagem">
-            <div class="textoSaibaMais"> 
-                <p>O projeto atende pessoas 
-                que querem conhecer um pouco 
-                mais de seus jogos favoritos, 
-                com estatísticas e ajudas sobre 
-                jogos em geral com foco do gênero 
-                soulslike, que tendem a ser mais 
-                díficeis e com poucas informações
+            <div class="textoSaibaMais">
+                <p>O projeto atende pessoas
+                    que querem conhecer um pouco
+                    mais de seus jogos favoritos,
+                    com estatísticas e ajudas sobre
+                    jogos em geral com foco do gênero
+                    soulslike, que tendem a ser mais
+                    díficeis e com poucas informações
                 </p>
             </div>
             <div class="imagemSaibaMais">
@@ -78,6 +79,76 @@
             </div>
         </div>
     </div>
+    <div class="segundaTelaSaibaMais">
+        <div class="headerSaibaMais">
+            <img src="img/jogos.png" alt="Controle" class="primeiraImagem">
+            <h1>Saiba mais</h1>
+            <img src="img/icons8-controle-96.png" alt="Controle" class="segundaImagem">
+        </div>
+        <div class="areaCardGraficoTexto">
+            <div class="textoGrafico">
+                <p>Este é um gráfico
+                    com a média de stress de
+                    uma pessoa antes e depois
+                    de jogar estes respectivos jogos
+                </p>
+            </div>
+            <div class="grafico">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+<script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Apex', 'Cs-GO', 'PUBG', 'CodWarzone'],
+            datasets: [{
+                label: 'Pre',
+                data: [30, 38, 35, 34],
+                borderWidth: 2,
+                backgroundColor: [
+                    'rgba(75, 200, 192, 0.2)',
+                    'rgba(75, 200, 192, 0.2)',
+                    'rgba(75, 200, 192, 0.2)',
+                    'rgba(75, 200, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgb(75, 192, 192)',
+                    'rgb(75, 192, 192)',
+                    'rgb(75, 192, 192)',
+                    'rgb(75, 192, 192)'
+                ],
+            }, {
+                label: 'Post',
+                data: [34, 42, 39, 39],
+
+                borderWidth: 2,
+                backgroundColor: [
+                    'rgba(255, 30, 50, 0.2)',
+                    'rgba(255, 30, 50, 0.2)',
+                    'rgba(255, 30, 50, 0.2)',
+                    'rgba(255, 30, 50, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132)',
+                    'rgba(255, 99, 132)',
+                    'rgba(255, 99, 132)',
+                    'rgba(255, 99, 132)'
+                ],
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+</script>
