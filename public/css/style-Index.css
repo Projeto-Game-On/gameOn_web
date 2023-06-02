@@ -121,13 +121,6 @@
     width: 10vh;
     height: auto;
     transform: rotate(-29deg);
-
-    /* position: fixed;
-    display: flex;
-    width: 5vw;
-    height: auto;
-    transform: translateX(39vw); */
-
 }
 
 .segundaImagem {
@@ -202,15 +195,88 @@
     /* border: red solid 2px; */
 }
 
-.textoGrafico p{
+.textoGrafico p {
     font-size: 50px;
 }
 
-.grafico{
+.grafico {
     width: 50%;
     height: 88%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* border: red solid 2px; */
+}
+
+.telaConheca {
+    width: 100%;
+    height: 100vh;
+    background-color: #141D76;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerConheca {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerConheca h1 {
+    font-size: 80px;
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(221, 225, 10, 0.5));
+    filter: drop-shadow(15px 10px 5px rgba(239, 243, 9, 0.5));
+}
+
+.cardsTextoBotao {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.textoConheca {
+    width: 50%;
+    height: 90%;
+    /* border: red 2px dotted; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoConheca p {
+    font-size: 8vh;
+}
+
+.botaoConheca {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: red 2px solid; */
+}
+
+.botaoConheca button{
+    width: 35vw;
+    height: 40vh;
+    font-size: 10vh;
+    border: none;
+    border-radius: 5vh;
+    background-color: #000123;
+}
+
+.botaoConheca img{
+    opacity: 0.3;
+    margin-left: 2%;
+    margin-top: 6%;
+    position: absolute; 
+    width: 25vw; 
+    height: 30vh;
 }
