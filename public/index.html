@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="icon" href="img/logo-monkey.png" type="image/png">
-        <link rel="stylesheet" href="css/style-PadraoTodos.css">
-        <link rel="stylesheet" href="css/style-Index.css">
+    <link rel="icon" href="img/logo-monkey.png" type="image/png">
+    <link rel="stylesheet" href="css/style-PadraoTodos.css">
+    <link rel="stylesheet" href="css/style-Index.css">
     <title>Game-ON</title>
 </head>
 
@@ -23,8 +23,8 @@
                 <a>HOME</a>
                 <a href="#SobreMim">SOBRE MIM</a>
                 <a href="#SaibaMais">SAIBA MAIS</a>
-                <a href="login.html">LOGIN</a>
-                <a href="cadastro.html" id="cadastro">CADASTRO</a>
+                <a href="Login.html">LOGIN</a>
+                <a href="Cadastro.html" id="cadastro">CADASTRO</a>
             </div>
         </div>
         <div class="sloganProjeto">
@@ -107,12 +107,12 @@
         <div class="cardsTextoBotao">
             <div class="textoConheca">
                 <p>Saiba mais sobre o
-                projeto fazendo o
-                cadastro, por aqui </p>
+                    projeto fazendo o
+                    cadastro, por aqui </p>
             </div>
             <div class="botaoConheca">
-                <button>Cadastre-se</button>
-                <img src="img/gif-click.png" alt="Gif Click" >
+                <button onclick="cadastro()">Cadastre-se</button>
+                <img src="img/gif-click.png" alt="Gif Click">
             </div>
         </div>
     </div>
@@ -120,6 +120,9 @@
 
 </html>
 <script>
+    function cadastro() {
+        window.location = "Cadastro.html"
+    }
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {

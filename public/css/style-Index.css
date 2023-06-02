@@ -272,6 +272,10 @@
     background-color: #000123;
 }
 
+.botaoConheca button:hover{
+    color: blue;
+}
+
 .botaoConheca img{
     opacity: 0.3;
     margin-left: 2%;
