@@ -1,15 +1,21 @@
-.areaCardAvaliacao {
+.areaCardInimigos {
     width: 78%;
     height: 100%;
+    margin-left: 3%;
+    overflow-x: hidden;
+    overflow-y: auto;
     /* border: red 5px dotted; */
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.areaCardInimigos h1 {
+    margin-left: 20%;
+}
+
 .linhaCards {
-    width: 90%;
+    width: 100%;
     height: 50%;
     /* border: red 5px dotted; */
     display: flex;
@@ -18,7 +24,7 @@
     justify-content: space-evenly;
 }
 
-.cardAvalicao {
+.cardInimigos {
     width: 28%;
     height: 90%;
     display: flex;
@@ -26,11 +32,11 @@
     border-radius: 4vh;
     background-color: black;
     align-items: center;
-    border: #DAA520 2px solid;
+    border: red 2px solid;
     justify-content: space-around;
 }
 
-.areaFotoJogo {
+.areaFotoInimigos {
     width: 100%;
     height: 40%;
     /* border: red 3px solid; */
@@ -56,7 +62,7 @@
     image-rendering: pixelated;
 }
 
-.cardNota {
+.cardDescricao {
     width: 80%;
     height: 60%;
     /* border: red 3px solid; */
@@ -66,11 +72,46 @@
     justify-content: space-evenly;
 }
 
-.cardNota h1{
+.cardDescricao h1 {
     font-size: 4vh;
 }
 
-.cardNota input{
-    width: 10vw;
-    color: black;
+.descricao {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    border: white 2px solid;
+    overflow-y: scroll;
+}
+
+.cardGrafico {
+    width: 62%;
+    height: 90%;
+    background-color: black;
+    border: red 2px solid;
+    border-radius: 4vh;
+    display: flex;
+}
+
+.textoGrafico {
+    width: 55%;
+    height: 100%;
+    padding-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoGrafico p {
+    font-size: 4vh;
+}
+
+.grafico {
+    /* border: red 2px solid; */
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

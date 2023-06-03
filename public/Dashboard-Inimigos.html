@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="img/logo-monkey.png" type="image/png">
+    <link rel="stylesheet" href="css/style-PadraoDashboard.css">
+    <link rel="stylesheet" href="css/style-DashboardInimigos.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="telaToda">
+        <div class="barraLateral">
+            <div class="barraLogo">
+                <p>GAME-ON</p>
+                <img src="img/logo-monkey.png" alt="Logo Macaco">
+            </div>
+            <div class="barraItens">
+                <ul>
+                    <a href="Dasboard-Avaliacao.html">
+                        <li>Avaliação Geral</li>
+                    </a>
+                    <a class="selected">
+                        <li>Inimigos</li>
+                    </a>
+                    <a href="Dashboard-Itens.html">
+                        <li>Itens</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="fotoUsuario">
+                <div class="bolaFoto">
+                    <!-- Imagem e Nickname do Banco de dados -->
+                    <img
+                        src="data:image/jpeg;base64,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">
+                    <span id="nickname">PitucoBruto</span>
+                </div>
+            </div>
+        </div>
+        <div class="areaCardInimigos">
+            <h1> Inimigos que os players mais sofrem</h1>
+            <div class="linhaCards">
+                <!-- Começo dos Cards -->
+                <div class="cardInimigos">
+                    <div class="areaFotoInimigos">
+                        <div class="cardImagem">
+                            <img src="img/guardiao-primata-inimigos.png">
+                        </div>
+                    </div>
+                    <div class="cardDescricao">
+                        <span>Nome: Guardião Primata</span>
+                        <span>Jogo: Sekiro</span>
+                        <div class="descricao">
+                            <p>O Guardião Primata é dos Chefes
+                                mais difíceis de se matar no sekiro,
+                                com diversos golpes que te fazem obrigatoriamente
+                                desviar</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardGrafico">
+                    <div class="textoGrafico">
+                        <p>Aqui está uma média
+                            aritimética dos players e o
+                            que eles acharam deste chefe de
+                            Sekiro
+                        </p>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Linha Dois  -->
+            <div class="linhaCards">
+                <div class="cardInimigos">
+                    <div class="areaFotoInimigos">
+                        <div class="cardImagem">
+                            <img src="img/gwyn-inimigos.png">
+                        </div>
+                    </div>
+                    <div class="cardDescricao">
+                        <span>Nome: Gwyn</span>
+                        <span>Jogo: Dark Souls 1</span>
+                        <div class="descricao">
+                            <p>Gwyn Lorde das cinzas, 
+                                outrora conhecido como Lord 
+                                da Luz do sol, foi um dos 
+                                quatros lordes originais 
+                                emergidos durante o alvorecer 
+                                da Era Fogo e o Principal antagonista 
+                                e chefe Final de Dark Souls. 
+                                Seus Atos são marcados pela forja de uma 
+                                coalizão entres os três lordes originais 
+                                e a extinção dos Dragões, resultando no 
+                                inicio efetivo de uma nova era. 
+                                Gwyn é o primeiro lorde a se vincular a 
+                                primeiro Chama e prolongar a era do Fogo, 
+                                tal façanha seria sucedida por Lordes Posteriores. 
+                                Este é um chefe considerados um dos mais dificeis da 
+                                franquia, já que apenas aqueles que dominam a habilidade 
+                                de esquivar o derrotam facilmente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardGrafico">
+                    <div class="textoGrafico">
+                        <p>Aqui está uma média
+                            aritimética dos players e o
+                            que eles acharam deste chefe de
+                            Dark Souls 1
+                        </p>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="myChartDois"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="linhaCards">
+                <div class="cardInimigos">
+                    <div class="areaFotoInimigos">
+                        <div class="cardImagem">
+                            <img src="img/ancient-dragon-inimigos.png">
+                        </div>
+                    </div>
+                    <div class="cardDescricao">
+                        <span>Nome: Ancient Dragon</span>
+                        <span>Jogo: Dark Souls II</span>
+                        <div class="descricao">
+                            <p>O Ancient Dragon, é um chefe que sua aparência 
+                                por si só representa medo 
+                                ele é um massivo dragão que 
+                                é temido por muitos por acabar com seu personagem 
+                                em um golpe só, isso não o torna tão difícil, mas 
+                                muitos players sofrem para ele pela 
+                                sua quantidade massiva de vida 
+                                que assusta muitos jogadores
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardGrafico">
+                    <div class="textoGrafico">
+                        <p>Aqui está uma média
+                            aritimética dos players e o
+                            que eles acharam deste chefe de
+                            Dark Souls 2
+                        </p>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="myChartTres"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="linhaCards">
+                <div class="cardInimigos">
+                    <div class="areaFotoInimigos">
+                        <div class="cardImagem">
+                            <img src="img/malenia-inimigos.png">
+                        </div>
+                    </div>
+                    <div class="cardDescricao">
+                        <span>Nome: Malenia</span>
+                        <span>Jogo: Elden Ring</span>
+                        <div class="descricao">
+                            <p>Como em novos jogos da
+                                FromSoftaware necessitavam de chefes mais dificeis,
+                                a Malenia é uma prova que eles conseguiram.
+                                Sendo uma chefe de duas fases, ou seja duas vidas,
+                                Malenia é uma semideusa, irmã da Miquela. Malenia é uma lutadora 
+                                que luta bravamente com sua espada, e mostra sua força total 
+                                ao derrota-la e chegar assim na sua fase dois, onde ela começa
+                                a realizar ataques mais perigosos, e diferentes do início, e ainda assim,
+                                pode curar 80% da sua vida na segunda fase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardGrafico">
+                    <div class="textoGrafico">
+                        <p>Aqui está uma média
+                            aritimética dos players e o
+                            que eles acharam deste chefe de
+                            Elden Ring
+                        </p>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="myChartQuatro"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
+
+<script>
+    const ctx = document.getElementById('myChart');
+    const cty = document.getElementById('myChartDois');
+    const ctz = document.getElementById('myChartTres');
+    const ctw = document.getElementById('myChartQuatro');
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Difícil', 'Médio', 'Fácil'],
+            datasets: [{
+                data: [30, 18, 07],
+                borderWidth: 2,
+                backgroundColor: [
+                    'red',
+                    'green',
+                    'blue'
+                ],
+                borderColor: [
+                    'white',
+                    'white',
+                    'white'
+                ],
+            },]
+        },
+        options: {
+            scales: {}
+        }
+    })
+
+    new Chart(cty, {
+        type: 'doughnut',
+        data: {
+            labels: ['Difícil', 'Médio', 'Fácil'],
+            datasets: [{
+                data: [35, 11, 9],
+                borderWidth: 2,
+                backgroundColor: [
+                    'red',
+                    'green',
+                    'blue'
+                ],
+                borderColor: [
+                    'white',
+                    'white',
+                    'white'
+                ],
+            },]
+        },
+        options: {
+            scales: {}
+        }
+    })
+
+    new Chart(ctz, {
+        type: 'doughnut',
+        data: {
+            labels: ['Difícil', 'Médio', 'Fácil'],
+            datasets: [{
+                data: [22, 24, 09],
+                borderWidth: 2,
+                backgroundColor: [
+                    'red',
+                    'green',
+                    'blue'
+                ],
+                borderColor: [
+                    'white',
+                    'white',
+                    'white'
+                ],
+            },]
+        },
+        options: {
+            scales: {}
+        }
+    })
+
+    new Chart(ctw, {
+        type: 'doughnut',
+        data: {
+            labels: ['Difícil', 'Médio', 'Fácil'],
+            datasets: [{
+                data: [44, 9, 2],
+                borderWidth: 2,
+                backgroundColor: [
+                    'red',
+                    'green',
+                    'blue'
+                ],
+                borderColor: [
+                    'white',
+                    'white',
+                    'white'
+                ],
+            },]
+        },
+        options: {
+            scales: {}
+        }
+    })
+</script>   
