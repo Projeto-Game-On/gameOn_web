@@ -25,6 +25,7 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: #091328;
+    display: flex;
 }
 
 .barraLateral {
@@ -99,18 +100,31 @@ html {
 }
 
 .fotoUsuario {
-    height: 25%;
     width: 90%;
+    height: 24%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    /* border: red 2px solid; */
 }
 
-.bolaFoto{
+.fotoUsuario span {
+    font-size: 3vh;
+}
+
+.bolaFoto {
     width: 50%;
-    height: 75%;
+    height: 60%;
     border-radius: 50%;
     background-color: white;
-    border: red 2px solid;
+    border: black 0.2vh solid;
+    align-items: center;
+}
+
+.bolaFoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
