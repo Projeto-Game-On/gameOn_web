@@ -26,12 +26,12 @@
                 <a id="cadastro">CADASTRO</a>
             </div>
         </div>
-        <div class="cardCadastro">
+        <div class="cardCadastro" id="cardCadastro">
             <h1>Cadastro</h1>
             <div class="cadastro">
                 <div class="card titulo">
                     <span>Login:</span>
-                    <input placeholder="Insira seu e-mail" id="input_login" type="text">
+                    <input placeholder="Insira seu e-mail" id="input_login" type="text" value="">
                 </div>
                 <div class="card titulo">
                     <span>Seu nick dos jogos:</span>
@@ -47,36 +47,43 @@
                 </div>
                 <div class="card titulo">
                     <span>Confirmação de Senha:</span>
-                    <input placeholder="Insira sua senha" id="input_senha" type="text">
+                    <input placeholder="Insira sua senha" id="input_confirmacao_senha" type="text">
                 </div>
             </div>
             <button onclick="cadastro()">Cadastre-se</button>
         </div>
+        <div id="div_mensagem"></div>
     </div>
 </body>
 
 </html>
 
 <script>
-    function cadastrar() {
-        aguardar();
+    div_mensagem.style.display = "none"
+
+    function cadastro() {
+        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var loginVar = input_login.value;
         var nicknameVar = input_nick.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
-        var senhaVar = senha_input.value;
+        var imagemVar = input_imagem.value;
+        var senhaVar = input_senha.value;
+        var confirmacaoSenhaVar = input_confirmacao_senha.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (confirmacaoSenhaVar == senhaVar) {
 
-            finalizarAguardar();
+        }
+        else {
+            alert("Suas senhas estão diferentes")
+        }
+        if (loginVar == "" || nicknameVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            alert("Confira os dados no seu campo");
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setInterval(alert("Estamos te redirecionando"), 5000)
         }
 
         // Enviando o valor da nova input
@@ -88,8 +95,9 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
+                loginServer: loginVar,
+                nicknameServer: nicknameVar,
+                imagemServer: imagemVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
@@ -97,12 +105,12 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                cardCadastro.style.display = "none"
+                div_mensagem.style.display = "block"
+                div_mensagem.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "Login.html";
                 }, "2000")
 
                 limparFormulario();
@@ -116,9 +124,5 @@
         });
 
         return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 </script>

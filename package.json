@@ -1,0 +1,19 @@
+{
+  "name": "gustavo",
+  "version": "1.0.0",
+  "description": "<h1>Aqui ficam os espaços de site que são públicos🎮</h1>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mssql": "^7.3.5",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7"
+  }
+}
