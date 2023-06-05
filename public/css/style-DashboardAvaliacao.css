@@ -70,7 +70,7 @@
     font-size: 4vh;
 }
 
-.cardNota input{
+.cardNota select{
     width: 10vw;
-    color: black;
+    background-color: black;
 }

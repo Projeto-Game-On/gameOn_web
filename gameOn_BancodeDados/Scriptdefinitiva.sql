@@ -37,3 +37,9 @@ SELECT * FROM Avaliacao;
 
 SELECT nomeJogo 'Nome do Jogo', empresaJogo 'empresa do Jogo', nicknameUsuario 'Nick', notaUsuario 'Nota do Jogo'
 FROM Avaliacao JOIN Jogos ON idJogo = fkJogo JOIN Usuario ON idUsuario = fkUsuario; 
+
+INSERT INTO Jogos VALUES (NULL, 'Sekiro', 'FromSoftaware'),
+						 (NULL, 'Dark Souls I', 'FromSoftaware'),
+						 (NULL, 'Dark Souls II', 'FromSoftaware'),
+                         (NULL, 'Dark Souls III', 'FromSoftaware'),
+                         (NULL, 'Elden Ring', 'FromSoftaware');
